@@ -10,3 +10,5 @@ $namadb="pilkasis";
 $koneksi=mysqli_connect($host,$userdb,$passdb,$namadb);
 </pre>
 4. Jalankan browser http://localhost/pilkasis
+
+Ada usulan untuk perubahan ke depankah? misal menggunakan framwork CI atau Laravel?
