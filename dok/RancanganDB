@@ -1,0 +1,14 @@
+db: pilkasis
+Tabel:
+- pengguna
+- siswa
+- guru
+- kandidat
+
+Rancangan Menu Utama
+- Admin
+  -- Daftar Admin
+  -- Tambah Admin
+- Siswa
+- Guru
+- Kandidat

@@ -1,0 +1,185 @@
+@keyframes zoomBox {
+	from {
+		top: 100%;
+	}
+	to {
+		/*transform: scale(-10,-10);*/
+		top: 0;
+	}
+}
+@keyframes slideFromTop {
+	from {
+		margin-top: -100%;
+		position: absolute;
+		opacity: 0;
+	}
+	to {
+		position: relative;
+	}
+}
+@keyframes slideFromBottom {
+	from {
+		margin-bottom: -100%;
+		position: absolute;
+		opacity: 0;
+	}
+	to {
+		position: relative;
+	}
+}
+@keyframes slideFromLeft {
+	from {
+		margin-left: -100%;
+		opacity: 0;
+	}
+}
+@keyframes slideFromRight {
+	from {
+		margin-right: -100%;
+		opacity: 0;
+	}
+}
+
+.slideFromLeft {
+	animation-duration: 1.5s;
+	animation-name: slideFromLeft;
+}
+.slideFromRight {
+	animation-duration: 1.5s;
+	animation-name: slideFromRight;	
+}
+.slideFromTop {
+	animation-duration: 1.5s;
+	animation-name: slideFromTop;
+}
+.slideFromTop {
+	animation-duration: 1.5s;
+	animation-name: slideFromBottom;
+}
+.fadein {
+	opacity: 1;
+}
+.fadeout {
+	opacity: 0;
+	transition: all 600ms ease-in-out;
+}
+
+/* CIRCLE LOADING */
+@keyframes circleloading-1 {
+	5% {
+		height: 10px;
+		width: 10px;
+	}
+	15% {
+		width: 30px;
+		height: 30px;
+	}
+	25% {
+		width: 60px;
+		height: 60px;
+		background-color: #ca2340;
+	}
+}
+@keyframes circleloading-2 {
+	20% {
+		height: 10px;
+		width: 10px;
+	}
+	35% {
+		width: 30px;
+		height: 30px;
+	}
+	55% {
+		width: 60px;
+		height: 60px;
+		background-color: #ca2340;
+	}
+}
+@keyframes circleloading-3 {
+	40% {
+		height: 10px;
+		width: 10px;
+	}
+	70% {
+		width: 30px;
+		height: 30px;
+	}
+	80% {
+		width: 60px;
+		height: 60px;
+		background-color: #ca2340;
+	}
+}
+@keyframes circleloading-4 {
+	80% {
+		height: 10px;
+		width: 10px;
+	}
+	90% {
+		width: 30px;
+		height: 30px;
+	}
+	100% {
+		width: 60px;
+		height: 60px;
+		background-color: #ca2340;
+	}
+}
+.circle-loading {
+	width: 400px;
+	padding-top: 15em;
+	margin:0px auto;
+}
+.circle-loading div {
+	width: 40px;
+	height: 40px;
+	margin: 0px 5px;
+	/*float: left;*/
+	display: inline-grid;
+	background-color: #2c3e50;
+	border-radius: 50%;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+.circle-loading div:nth-child(1) {
+	animation-name: circleloading-1;
+}
+.circle-loading div:nth-child(2) {
+	animation-name: circleloading-2;
+}
+.circle-loading div:nth-child(3) {
+	animation-name: circleloading-3;
+}
+.circle-loading div:nth-child(4) {
+	animation-name: circleloading-4;
+}
+.circle-loading .text-loading {
+	font-weight: bold;
+}
+
+/* SIMPLE ANIMATION */
+@keyframes circle-disko {
+	from {
+		transform: scale(5,5);
+		opacity: 1;
+		box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.08)
+	}
+}
+.circle-simple {
+	background: #18de21 url(../../gambar/logok.png) center;
+	height: 32px;
+	width: 32px;
+	line-height: 30px;
+	font-size: 5px;
+	color: #EEE;
+	font-family: 'Roboto Light';
+	text-align: center;
+	opacity: 0;
+	border-radius: 100%;
+	animation-duration: .7s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-name: circle-disko;
+	margin:0px auto;
+	margin-top: 30em;
+}
