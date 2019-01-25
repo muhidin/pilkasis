@@ -16,20 +16,21 @@ if(isset($_POST['simpan'])){
 	$tipefile=$_FILES['foto']['type'];
 	
 	if(empty($lokasi)){
-		$sql="INSERT INTO pengguna SET idpengguna='', username='$pengguna', password='$sandi', nama='$nama', jabatan='$jabatan',hp='$hp',email='$surel', hakakses='$hakakses', aktif='$aktif'";
+		$sql="INSERT INTO pengguna SET username='$pengguna', password='$sandi', nama='$nama', jabatan='$jabatan',hp='$hp',email='$surel', hakakses='$hakakses', aktif='$aktif'";
 	}else{
 		$folder="../gambar/pengguna/";
 		$ukuran=100;
 		UploadFoto($namafile,$folder,$ukuran);
 		
-		$sql="INSERT INTO pengguna SET idpengguna='', username='$pengguna', password='$sandi', nama='$nama', jabatan='$jabatan',hp='$hp',email='$surel', hakakses='$hakakses', aktif='$aktif', foto='$namafile'";
+		$sql="INSERT INTO pengguna SET username='$pengguna', password='$sandi', nama='$nama', jabatan='$jabatan',hp='$hp',email='$surel', hakakses='$hakakses', aktif='$aktif', foto='$namafile'";
 	}
 	$simpan=mysqli_query($koneksi,$sql);
 	if($simpan){
 		header('Location:?m=admin&s=awal');
 		//echo "berhasil";
 	}else{
-		include "?m=admin&s=awal";
+		var_dump($sql);
+		include "index.php?m=admin";
 		echo '<script language="JavaScript">';
 			echo 'alert("Data Gagal Ditambahkan.")';
 		echo '</script>';

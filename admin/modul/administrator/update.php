@@ -36,18 +36,20 @@ if(isset($_POST['simpan'])){
 		}
 	}
 	$simpan=mysqli_query($koneksi,$sql);
-	//var_dump($sql);
+	//var_dump($sql);	
+	
 	if($simpan){
-		//$_SESSION['idkasis'] 		= $b['idpengguna'];
-		$_SESSION['userkasis'] 		= $pengguna;
-		$_SESSION['namakasis'] 		= $nama;
-		$_SESSION['jabatankasis'] 	= $jabatan;
-		$_SESSION['hakakseskasis'] 	= $hakakses;
-		if(!empty($lokasi)){
-			$_SESSION['fotokasis'] 	= $namafile;
+		if($id==$_SESSION['idkasis']){
+			//$_SESSION['idkasis'] 		= $b['idpengguna'];
+			$_SESSION['userkasis'] 		= $pengguna;
+			$_SESSION['namakasis'] 		= $nama;
+			$_SESSION['jabatankasis'] 	= $jabatan;
+			$_SESSION['hakakseskasis'] 	= $hakakses;
+			if(!empty($lokasi)){
+				$_SESSION['fotokasis'] 	= $namafile;
+			}
 		}
 		header('Location:index.php?m=admin&s=awal');
-		//echo "berhasil";
 	}else{
 		echo "gagal alias tidak berhasil";
 		include "index.php?m=admin&s=awal";
