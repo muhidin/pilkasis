@@ -5,7 +5,7 @@ function UploadFoto($namafile,$folder,$ukuran){
 	move_uploaded_file($_FILES['foto']['tmp_name'], $fileupload);
 
 	// Identitas file asli
-	$gbr_asli = imagecreatefromjpeg($file_upload);
+	$gbr_asli = imagecreatefromjpeg($fileupload);
 	$lebar    = imageSX($gbr_asli);
 	$tinggi   = imageSY($gbr_asli);
   
