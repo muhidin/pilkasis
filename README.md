@@ -10,4 +10,11 @@ Cara Instalasi:
   $koneksi=mysqli_connect($host,$userdb,$passdb,$namadb);
 </pre>
 4. Jalankan browser http://localhost/pilkasis
-5. Ada usulan untuk perubahan ke depankah, misal menggunakan framework CI atau Laravel?
+5. Untuk masuk ke dashboard (administrator) dapat menggunakan link http://localhost/pilkasis/admin dengan menggunakan akun
+<pre>
+  user: admin
+  pass: admin
+  jika belum berhasil, cek petunjuk no. 3
+</pre>
+7. Jika masih ada kesulitan bisa cek tutorial cara install dalam bentuk video <a href="https://www.youtube.com/watch?v=twrV0zMzeEY&list=PLnWlL1VzlOHEJVWi_zNxVm8sP-Y671Om7" target="blank">disini<a>
+8. Ada usulan untuk perubahan ke depankah, misal menggunakan framework CI atau Laravel?
